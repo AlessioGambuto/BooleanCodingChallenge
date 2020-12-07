@@ -1,0 +1,78 @@
+*{
+  /* Imposto il margine predefinito a 0 e la proprietà che sottrae le dimensioni
+  di bordo e padding(invece di sommarle come di default)per semplificare i calcoli */
+  margin: 0;
+  box-sizing:  border-box;
+}
+body{
+  background-image: url("img/background.jpg");
+  /* "Background-size: cover" riempie la pagina con lo sfondo sopraselezionato
+  mentre "background-attachment: fixed" la adatta(senza deformarla) alla risoluzione */
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Roboto', sans-serif;
+  }
+.container{
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  width: 70%;
+  margin-top: 2%;
+  margin-left: 14%;
+  padding: 4% 6% 6% 6%;
+}
+img{
+  height: 110px;
+}
+h1{
+    color: rgb(0, 230, 0);
+}
+header, nav{
+  text-align: center;
+}
+nav{
+  background-color: rgb(0, 230, 0);
+  padding: 1%;
+}
+main{
+  color: white;
+}
+ul{
+  /* Riduco manualmente il padding della lista a 0, in quanto di default non lo è,
+  al fine di portarla alla stessa indentazione del resto del contenuto, inoltre ne
+  cambio la forma dei punti */
+  padding-left: 0;
+  list-style-type: square;
+  list-style-position: inside;
+}
+li{
+  padding-top: 3%;
+  font-size: 22px;
+}
+p{
+  line-height: 28px;
+}
+ul>p:before{
+  /* Aggiungo al contenuto prima di ogni p figlio di ul la freccia caratteristica
+  e uno spazio per far si che quest'ultima non sia attaccata al testo */
+  content: "\21A6" "\00a0";
+}
+/* Nella parte seguente definisco prima le proprietà generali per i tutti i div
+figli di ul (quindi le barre di carica dei monopattini), ovvero l'altezza e
+la smussatezza degli angoli, poi definisco le proprietà delle singole e diverse
+barre, ovvero il colore e la larghezza */
+ul>div{
+  height: 30px;
+  border-radius: 5px;
+}
+.orangebar{
+  background-color: #ffbe3b;
+  width: 35%;
+}
+.greenbar{
+background-color: #54d500;
+width: 60%;
+}
+.redbar{
+  background-color: #c93333;
+  width: 15%;
+}
